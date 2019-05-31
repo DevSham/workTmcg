@@ -5,14 +5,15 @@ php:
 - 7.1
 
 services:
-- mysql
+- sqlite
 
 before_script:
 - cp .env.travis .env
 - mysql -e 'create database testing;'
 - composer self-update
 - composer install --no-interaction
-- php artisan key:generate
+
+
 
 
 script:
