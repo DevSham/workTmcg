@@ -6,6 +6,8 @@ php:
 
 services:
 - sqlite
+install: 
+- php vendor/vendors.php
 
 before_script:
 - cp .env.travis .env
